@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমার ই-কমার্স শপ</title>
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-orange-600">আমার শপ</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-orange-600 font-semibold">হোম</a>
+                <a href="#categories" class="hover:text-orange-600">ক্যাটাগরি</a>
+                <a href="#bestsellers" class="hover:text-orange-600">বেস্ট সেলিং</a>
+                <a href="#account" class="hover:text-orange-600">মাই অ্যাকাউন্ট</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="#cart" class="relative text-gray-700 hover:text-orange-600">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-orange-600 text-white text-xs rounded-full px-1.5">১</span>
+                </a>
+                <a href="#account" class="text-gray-700 hover:text-orange-600"><i class="fas fa-user text-xl"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (2 Pages / Banners) -->
+    <section id="home" class="relative bg-orange-100 overflow-hidden">
+        <div id="hero-slider" class="relative w-full py-16 px-6 text-center">
+            <!-- Slide 1 -->
+            <div class="slide block">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">সেরা অফারে দারুণ কেনাকাটা!</h2>
+                <p class="text-lg text-gray-700 mb-6">বিশেষ ছাড় পেতে আজই আপনার পছন্দের পণ্য অর্ডার করুন।</p>
+                <a href="#bestsellers" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700">এখনই কিনুন</a>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide hidden">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">নতুন গ্যাজেট সংগ্রহ ২০২৬</h2>
+                <p class="text-lg text-gray-700 mb-6">অরিজিনাল ইলেকট্রনিক্স পণ্য দ্রুত ডেলিভারিতে।</p>
+                <a href="#newarrivals" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700">কালেকশন দেখুন</a>
+            </div>
+            <!-- Navigation buttons -->
+            <button onclick="toggleHeroSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/50 p-2 rounded-full hover:bg-white"><i class="fas fa-chevron-left"></i></button>
+            <button onclick="toggleHeroSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/50 p-2 rounded-full hover:bg-white"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section id="categories" class="py-12 container mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-orange-600 pl-3">ক্যাটাগরি সমূহ</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg cursor-pointer">
+                <i class="fas fa-mobile-alt text-3xl text-orange-600 mb-2"></i>
+                <h3 class="font-medium">মোবাইল ও গ্যাজেট</h3>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg cursor-pointer">
+                <i class="fas fa-tshirt text-3xl text-orange-600 mb-2"></i>
+                <h3 class="font-medium">ফ্যাশন ও ক্লথিং</h3>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg cursor-pointer">
+                <i class="fas fa-home text-3xl text-orange-600 mb-2"></i>
+                <h3 class="font-medium">হোম অ্যাপ্লায়েন্স</h3>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg cursor-pointer">
+                <i class="fas fa-heart text-3xl text-orange-600 mb-2"></i>
+                <h3 class="font-medium">সৌন্দর্য ও যত্ন</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Selling Products Section -->
+    <section id="bestsellers" class="py-8 container mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-orange-600 pl-3">বেস্ট সেলিং প্রোডাক্টস</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between">
+                <img src="https://via.placeholder.com/200" alt="Product" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="font-bold">ওয়ারলেস হেডফোন</h3>
+                <p class="text-orange-600 font-bold my-2">৳১,৫০০</p>
+                <a href="#order" class="bg-orange-600 text-white text-center py-2 rounded hover:bg-orange-700">অর্ডার করুন</a>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between">
+                <img src="https://via.placeholder.com/200" alt="Product" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="font-bold">স্মার্ট ওয়াচ</h3>
+                <p class="text-orange-600 font-bold my-2">৳২,২০০</p>
+                <a href="#order" class="bg-orange-600 text-white text-center py-2 rounded hover:bg-orange-700">অর্ডার করুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Rating Products Section -->
+    <section class="py-8 container mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800 border-l-4 border-orange-600 pl-3">টপ রেটিং প্রোডাক্টস</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow p-4 flex flex-col justify-between">
+                <img src="https://via.placeholder.com/200" alt="Product" class="w-full h-48 object-cover rounded mb-4">
+                <h3 class="font-bold">ব্লুটুথ স্পিকার</h3>
+                <div class="text-yellow-500 my-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> (5.0)</div>
+                <p class="text-orange-600 font-bold my-2">৳১,৮০০</p>
+                <a href="#order" class="bg-orange-600 text-white text-center py-2 rounded hover:bg-orange-700">অর্ডার করুন</a>
+            </div>
